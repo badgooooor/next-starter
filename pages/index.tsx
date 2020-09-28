@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Layout from "../components/Layout";
-
 import { observer, inject } from "mobx-react";
+import Layout from "../containers/Layout";
+import TestButton from "../components/button/TestButton";
 
 const IndexPage = inject("store")(
   observer((props: any) => {
@@ -16,6 +16,7 @@ const IndexPage = inject("store")(
               <a>About</a>
             </Link>
           </p>
+          <TestButton text="Test" />
         </div>
       </Layout>
     );
